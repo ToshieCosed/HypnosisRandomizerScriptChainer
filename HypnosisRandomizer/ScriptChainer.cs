@@ -20,10 +20,10 @@ namespace HypnosisRandomizer
         public void chain_script(string ScriptName)
         {
             ScriptRepresentation rep = new ScriptRepresentation();
-            string BaseFilename = Application.StartupPath;
-            BaseFilename += "/Scripts/"+ ScriptName;
+            //string BaseFilename = Application.StartupPath;
+            //BaseFilename += "/Scripts/"+ ScriptName;
             //rep.FileName = "/Scripts/Tags_Test.txt";
-            rep.init(BaseFilename);
+            rep.init(ScriptName);
             ScriptList.Add(rep);
         }
 

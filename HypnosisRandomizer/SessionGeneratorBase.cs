@@ -26,8 +26,9 @@ namespace HypnosisRandomizer
             ScriptChainer ScriptFetcher = new ScriptChainer();
             string Directory_ = Application.StartupPath;
                 //Set it to point to /Scripts
-            Directory_ += "/Scripts/";
+            Directory_ += "/scripts/";
             string[] Script_Pool = Directory.GetFiles(Directory_);
+            //new object();
             foreach(string scriptname in Script_Pool)
             {
                 ScriptFetcher.chain_script(scriptname);
@@ -35,7 +36,6 @@ namespace HypnosisRandomizer
 
                 //And finally re-use this lovely object to load the un-filtered script pool into memory!
             ScriptPoolUnfiltered = ScriptFetcher.Get_Scripts();
-
         }
 
 

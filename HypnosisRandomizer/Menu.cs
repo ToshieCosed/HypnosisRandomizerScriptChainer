@@ -19,6 +19,8 @@ namespace HypnosisRandomizer
 
         private void Button1_Click(object sender, EventArgs e)
         {
+            SessionGeneratorBase genner = new SessionGeneratorBase();
+            genner.PopulateScriptPoolNoPrefs();
             
         }
 
