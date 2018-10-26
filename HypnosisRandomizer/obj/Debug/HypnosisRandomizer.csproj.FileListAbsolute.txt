@@ -1,0 +1,11 @@
+C:\Users\Remmie's\source\repos\HypnosisRandomizer\HypnosisRandomizer\bin\Debug\HypnosisRandomizer.exe.config
+C:\Users\Remmie's\source\repos\HypnosisRandomizer\HypnosisRandomizer\bin\Debug\HypnosisRandomizer.exe
+C:\Users\Remmie's\source\repos\HypnosisRandomizer\HypnosisRandomizer\bin\Debug\HypnosisRandomizer.pdb
+C:\Users\Remmie's\source\repos\HypnosisRandomizer\HypnosisRandomizer\obj\Debug\HypnosisRandomizer.csprojAssemblyReference.cache
+C:\Users\Remmie's\source\repos\HypnosisRandomizer\HypnosisRandomizer\obj\Debug\HypnosisRandomizer.Properties.Resources.resources
+C:\Users\Remmie's\source\repos\HypnosisRandomizer\HypnosisRandomizer\obj\Debug\HypnosisRandomizer.csproj.GenerateResource.cache
+C:\Users\Remmie's\source\repos\HypnosisRandomizer\HypnosisRandomizer\obj\Debug\HypnosisRandomizer.csproj.CoreCompileInputs.cache
+C:\Users\Remmie's\source\repos\HypnosisRandomizer\HypnosisRandomizer\obj\Debug\HypnosisRandomizer.exe
+C:\Users\Remmie's\source\repos\HypnosisRandomizer\HypnosisRandomizer\obj\Debug\HypnosisRandomizer.pdb
+C:\Users\Remmie's\source\repos\HypnosisRandomizer\HypnosisRandomizer\obj\Debug\HypnosisRandomizer.Menu.resources
+C:\Users\Remmie's\source\repos\HypnosisRandomizer\HypnosisRandomizer\obj\Debug\HypnosisRandomizer.Feature_Not_Implemented.resources
