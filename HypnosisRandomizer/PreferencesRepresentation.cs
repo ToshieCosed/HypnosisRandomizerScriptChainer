@@ -9,6 +9,7 @@ namespace HypnosisRandomizer
     public class PreferencesRepresentation
     {
         public List<Program.ScriptFeatures> EnabledScriptFeatures = new List<Program.ScriptFeatures>();
+        public List<Program.PreferenceEnums> PreferencesListEnums = new List<Program.PreferenceEnums>();
         public EnumHelper enum_helper = new EnumHelper();
         public Dictionary<Program.ScriptFeatures, Program.PreferenceEnums> PrefsDictionary = new Dictionary<Program.ScriptFeatures, Program.PreferenceEnums>();
 
@@ -47,6 +48,20 @@ namespace HypnosisRandomizer
             PrefsDictionary.Add(Program.ScriptFeatures.ContainsMasturbation, Program.PreferenceEnums.AllowForcedMasturbation);
             PrefsDictionary.Add(Program.ScriptFeatures.EnslaveTraining, Program.PreferenceEnums.AllowSlaveTraining);
             PrefsDictionary.Add(Program.ScriptFeatures.AllowsCustomName, Program.PreferenceEnums.AllowCustomNameUse);
+        }
+
+            //Populate the mirror preferences List using the dictionary to get keys from the primary script features list
+                //I cannot remember why I did it this way @_@ but it's there for something.
+        public void ResetAndFillPrefs()
+        {
+            PreferencesListEnums.Clear();
+            foreach(Program.ScriptFeatures feature in EnabledScriptFeatures)
+            {
+                if (PrefsDictionary.ContainsKey(feature))
+                {
+                    PreferencesListEnums.Add(PrefsDictionary[feature]);
+                }
+            }
         }
 
         public bool HasFeatureAsString(string feature)

@@ -10,15 +10,23 @@ using System.Windows.Forms;
 
 namespace HypnosisRandomizer
 {
-    public partial class Feature_Not_Implemented : Form
+    public partial class Dialouge : Form
     {
-        public Feature_Not_Implemented()
+        public string ReturnValue{ get; set; }
+        public Dialouge()
         {
             InitializeComponent();
         }
 
-        private void Okay_Button_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
+            this.ReturnValue = "Yes";
+            this.Close();
+        }
+
+        private void No_Click(object sender, EventArgs e)
+        {
+            this.ReturnValue = "No";
             this.Close();
         }
     }

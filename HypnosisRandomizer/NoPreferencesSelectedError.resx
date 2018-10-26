@@ -117,10 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="FeatureNotImplementedTextBox.Text" xml:space="preserve">
-    <value>Hey! It looks like you're trying to use a feature that isn't yet implemented.
-It will still be enabled, but nothing will happen as a result!
-Sorry for the inconvenience, the rest of this software will work as intended though.
-Don't worry! THIS IS NOT AN ERROR.</value>
+  <data name="ErrorTextBox.Text" xml:space="preserve">
+    <value>Sorry but, you haven't actually selected any preferences yet.
+This program will literally crash if you have no preferences selected, 
+so to prevent that we've created this friendly little textbox.
+Please select 1 or more preferences before beginning your session.
+Thanks.</value>
   </data>
 </root>

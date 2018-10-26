@@ -19,8 +19,31 @@ namespace HypnosisRandomizer
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            SessionGeneratorBase genner = new SessionGeneratorBase();
-            genner.PopulateScriptPoolNoPrefs();
+            if (Program.userpreferences.EnabledScriptFeatures.Count > 0)
+            {
+                SessionGeneratorBase genner = new SessionGeneratorBase();
+                genner.PopulateScriptPoolNoPrefs();
+                genner.Remove_NonPrefs();
+                //The other prefs format, I cannot remember why I set up prefs-mirroring.
+                //Something something -script chaining logic. yeah. Not really needed now. Maybe?
+                Program.userpreferences.ResetAndFillPrefs();
+                genner.GenerateGenericSession(5);
+                foreach(ScriptRepresentation rep in genner.Session_List)
+                {
+                    SpeechScriptInterpreter interpreter = new SpeechScriptInterpreter();
+                    interpreter.init();
+                    interpreter.parse(rep.FileName);
+                }
+
+
+            }
+            else
+            {
+                NoPreferencesSelectedError DialogePopup = new NoPreferencesSelectedError();
+                DialogePopup.ShowDialog();
+            }
+
+            new Object();
             
         }
 

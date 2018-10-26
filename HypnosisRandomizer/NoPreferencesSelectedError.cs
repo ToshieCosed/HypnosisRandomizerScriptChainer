@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace HypnosisRandomizer
 {
-    public partial class Feature_Not_Implemented : Form
+    public partial class NoPreferencesSelectedError : Form
     {
-        public Feature_Not_Implemented()
+        public NoPreferencesSelectedError()
         {
             InitializeComponent();
         }
 
-        private void Okay_Button_Click(object sender, EventArgs e)
+        private void ButtonOkay_Click(object sender, EventArgs e)
         {
             this.Close();
         }

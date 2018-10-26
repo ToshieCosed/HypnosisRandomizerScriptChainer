@@ -9,6 +9,9 @@ namespace HypnosisRandomizer
     public static class Program
     {
         public static PreferencesRepresentation userpreferences = new PreferencesRepresentation();
+        private static Random rng = new Random();
+        public static string voicename = "";
+
 
         /// <summary>
         /// The main entry point for the application.
@@ -21,6 +24,23 @@ namespace HypnosisRandomizer
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Menu());
         }
+
+
+        //This randomize code taken from stackoverflow at: https://stackoverflow.com/questions/273313/randomize-a-listt
+
+        public static void Shuffle<T>(this IList<T> list)
+        {
+            int n = list.Count;
+            while (n > 1)
+            {
+                n--;
+                int k = rng.Next(n + 1);
+                T value = list[k];
+                list[k] = list[n];
+                list[n] = value;
+            }
+        }
+
         public enum ScriptFeatures
         {
             IsInduction = 01, IsDeepener = 02, InstallsTrigger = 03, InstallsOpenTrigger = 04, InstallsTrustedTrigger = 05,

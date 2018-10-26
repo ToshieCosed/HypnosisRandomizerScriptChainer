@@ -14,6 +14,7 @@ namespace HypnosisRandomizer
         public string InternalFilename;
         public string RequiresScript; //Will be updated to a list later to allow dynamic inclusion of more than one script neccesity
         public bool Trusted_Script = false;
+        public string[] File_Lines;
         public Program.ScriptFeatures ScriptType = new Program.ScriptFeatures();
         EnumHelper enumhelper = new EnumHelper(); //Added an enum helper so the function Get_Enums(string) can be used from within any class.
 
@@ -23,6 +24,8 @@ namespace HypnosisRandomizer
             ScriptScanner scanner = new ScriptScanner();
             List<string> Feature_Strings = scanner.getproperties(file_lines);
             FeaturesList = ConvertFeaturesToLocalEnumList(Feature_Strings);
+            FileName = filename;
+            File_Lines = file_lines;
         }
 
         public List<Program.ScriptFeatures> ConvertFeaturesToLocalEnumList(List<string> LocalStringList)
