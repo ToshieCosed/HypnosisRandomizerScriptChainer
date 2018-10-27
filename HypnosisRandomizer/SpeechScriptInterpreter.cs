@@ -23,6 +23,7 @@ namespace HypnosisRandomizer
 
         public void init()
         {
+
             //fill the lookups for match cases with external script
             Emphasisvalues.Add("Moderate", PromptEmphasis.Moderate);
             Emphasisvalues.Add("None", PromptEmphasis.None);
@@ -71,6 +72,7 @@ namespace HypnosisRandomizer
             QueryMulti selectvoice = new QueryMulti();
             string[] voices = vnames.ToArray();
             int voice_amount = voices.Length;
+            //voices[3] = voices[6];
             //Dialouge output_test = new Dialouge();
            // output_test.Yes.Text = "Voice amount";
             //output_test.No.Text = voice_amount.ToString();
@@ -80,20 +82,26 @@ namespace HypnosisRandomizer
                 case 1:
                     selectvoice.One.Text = voices[0];
                     selectvoice.Two.Text = "No Voice";
+                    selectvoice.Two.Visible = false;
                     selectvoice.Three.Text = "No Voice";
+                    selectvoice.Three.Visible = false;
                     selectvoice.Four.Text = "No Voice";
+                    selectvoice.Four.Visible = false;
                     break;
                 case 2:
                     selectvoice.One.Text = voices[0];
                     selectvoice.Two.Text = voices[1];
                     selectvoice.Three.Text = "No Voice";
+                    selectvoice.Three.Visible = false;
                     selectvoice.Four.Text = "No Voice";
+                    selectvoice.Four.Visible = false;
                     break;
                 case 3:
                     selectvoice.One.Text = voices[0];
                     selectvoice.Two.Text = voices[1];
                     selectvoice.Three.Text = voices[2];
                     selectvoice.Four.Text = "No Voice";
+                    selectvoice.Four.Visible = false;
                     break;
                 case 4:
                     selectvoice.One.Text = voices[0];
@@ -121,24 +129,27 @@ namespace HypnosisRandomizer
                 case "One":
                     reader.SelectVoice(voices[0]);
                     Program.voicename = voices[0];
+                    reader.Speak("You've selected " + voices[0]);
                     break;
                 case "Two":
                     reader.SelectVoice(voices[1]);
                     Program.voicename = voices[1];
+                    reader.Speak("You've selected " + voices[1]);
                     break;
                 case "Three":
                     reader.SelectVoice(voices[2]);
                     Program.voicename = voices[2];
+                    reader.Speak("You've selected " + voices[2]);
                     break;
                 case "Four":
                     reader.SelectVoice(voices[3]);
                     Program.voicename = voices[3];
+                    reader.Speak("You've selected " + voices[3]);
                     break;
 
             }
             //reader.SelectVoice("IVONA 2 Emma");
             //reader.SelectVoice("Microsoft Anna");
-            
         }
 
         public void Init_Voice(string voicename)
@@ -175,11 +186,14 @@ namespace HypnosisRandomizer
             style_.Rate = PromptRate.Medium;
             style_.Emphasis = PromptEmphasis.NotSet;
             builder.ClearContent();
+            builder.StartVoice(Program.voicename);
             builder.StartSentence();
             builder.StartStyle(style_);
             builder.AppendText(voice_string);
             builder.EndStyle();
             builder.EndSentence();
+            builder.EndVoice();
+            
             //lastly let the ball roll and see if we can hear some chatter.
             reader.Speak(builder);
         }
@@ -472,11 +486,13 @@ namespace HypnosisRandomizer
                 {
                     string voice_string = input.Substring(4);
                     builder.ClearContent();
+                    builder.StartVoice(Program.voicename);
                     builder.StartSentence();
                     builder.StartStyle(style_);
                     builder.AppendText(voice_string);
                     builder.EndStyle();
                     builder.EndSentence();
+                    builder.EndVoice();
                         //lastly let the ball roll and see if we can hear some chatter.
                     reader.Speak(builder);
 

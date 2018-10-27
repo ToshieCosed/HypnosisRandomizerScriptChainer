@@ -93,18 +93,22 @@ namespace HypnosisRandomizer
             // 
             // GenerateSession
             // 
-            this.GenerateSession.Location = new System.Drawing.Point(988, 752);
+            this.GenerateSession.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.GenerateSession.Location = new System.Drawing.Point(981, 456);
             this.GenerateSession.Name = "GenerateSession";
-            this.GenerateSession.Size = new System.Drawing.Size(157, 82);
+            this.GenerateSession.Size = new System.Drawing.Size(147, 82);
             this.GenerateSession.TabIndex = 0;
             this.GenerateSession.Text = "Generate Session";
-            this.GenerateSession.UseVisualStyleBackColor = true;
+            this.GenerateSession.UseVisualStyleBackColor = false;
             this.GenerateSession.Click += new System.EventHandler(this.Button1_Click);
             // 
             // Preferences
             // 
             this.Preferences.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.Preferences.Controls.Add(this.GroupBoxDangerousSettings);
+            this.Preferences.Controls.Add(this.GenerateSession);
             this.Preferences.Controls.Add(this.CheckBoxUseName);
+            this.Preferences.Controls.Add(this.GroupBoxCustomTriggers);
             this.Preferences.Controls.Add(this.CheckBoxAllowSlaveryBrainWash);
             this.Preferences.Controls.Add(this.CheckBoxAllowMasturbation);
             this.Preferences.Controls.Add(this.CheckBoxAllowStrip);
@@ -137,9 +141,9 @@ namespace HypnosisRandomizer
             this.Preferences.Controls.Add(this.CheckBoxRewardSegments);
             this.Preferences.Controls.Add(this.CheckBoxPunishSegments);
             this.Preferences.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.Preferences.Location = new System.Drawing.Point(13, 13);
+            this.Preferences.Location = new System.Drawing.Point(11, 12);
             this.Preferences.Name = "Preferences";
-            this.Preferences.Size = new System.Drawing.Size(402, 821);
+            this.Preferences.Size = new System.Drawing.Size(1134, 551);
             this.Preferences.TabIndex = 1;
             this.Preferences.TabStop = false;
             this.Preferences.Text = "Preferences";
@@ -147,7 +151,7 @@ namespace HypnosisRandomizer
             // CheckBoxUseName
             // 
             this.CheckBoxUseName.AutoSize = true;
-            this.CheckBoxUseName.Location = new System.Drawing.Point(7, 763);
+            this.CheckBoxUseName.Location = new System.Drawing.Point(338, 192);
             this.CheckBoxUseName.Name = "CheckBoxUseName";
             this.CheckBoxUseName.Size = new System.Drawing.Size(204, 17);
             this.CheckBoxUseName.TabIndex = 32;
@@ -158,7 +162,7 @@ namespace HypnosisRandomizer
             // CheckBoxAllowSlaveryBrainWash
             // 
             this.CheckBoxAllowSlaveryBrainWash.AutoSize = true;
-            this.CheckBoxAllowSlaveryBrainWash.Location = new System.Drawing.Point(6, 739);
+            this.CheckBoxAllowSlaveryBrainWash.Location = new System.Drawing.Point(6, 479);
             this.CheckBoxAllowSlaveryBrainWash.Name = "CheckBoxAllowSlaveryBrainWash";
             this.CheckBoxAllowSlaveryBrainWash.Size = new System.Drawing.Size(261, 17);
             this.CheckBoxAllowSlaveryBrainWash.TabIndex = 31;
@@ -169,7 +173,7 @@ namespace HypnosisRandomizer
             // CheckBoxAllowMasturbation
             // 
             this.CheckBoxAllowMasturbation.AutoSize = true;
-            this.CheckBoxAllowMasturbation.Location = new System.Drawing.Point(7, 715);
+            this.CheckBoxAllowMasturbation.Location = new System.Drawing.Point(7, 456);
             this.CheckBoxAllowMasturbation.Name = "CheckBoxAllowMasturbation";
             this.CheckBoxAllowMasturbation.Size = new System.Drawing.Size(300, 17);
             this.CheckBoxAllowMasturbation.TabIndex = 30;
@@ -180,7 +184,7 @@ namespace HypnosisRandomizer
             // CheckBoxAllowStrip
             // 
             this.CheckBoxAllowStrip.AutoSize = true;
-            this.CheckBoxAllowStrip.Location = new System.Drawing.Point(7, 691);
+            this.CheckBoxAllowStrip.Location = new System.Drawing.Point(338, 215);
             this.CheckBoxAllowStrip.Name = "CheckBoxAllowStrip";
             this.CheckBoxAllowStrip.Size = new System.Drawing.Size(207, 17);
             this.CheckBoxAllowStrip.TabIndex = 29;
@@ -191,7 +195,7 @@ namespace HypnosisRandomizer
             // CheckBoxAllowIQDropTriggers
             // 
             this.CheckBoxAllowIQDropTriggers.AutoSize = true;
-            this.CheckBoxAllowIQDropTriggers.Location = new System.Drawing.Point(7, 667);
+            this.CheckBoxAllowIQDropTriggers.Location = new System.Drawing.Point(6, 502);
             this.CheckBoxAllowIQDropTriggers.Name = "CheckBoxAllowIQDropTriggers";
             this.CheckBoxAllowIQDropTriggers.Size = new System.Drawing.Size(319, 17);
             this.CheckBoxAllowIQDropTriggers.TabIndex = 28;
@@ -202,7 +206,7 @@ namespace HypnosisRandomizer
             // CheckBoxAllowAccidentalTriggers
             // 
             this.CheckBoxAllowAccidentalTriggers.AutoSize = true;
-            this.CheckBoxAllowAccidentalTriggers.Location = new System.Drawing.Point(7, 641);
+            this.CheckBoxAllowAccidentalTriggers.Location = new System.Drawing.Point(7, 433);
             this.CheckBoxAllowAccidentalTriggers.Name = "CheckBoxAllowAccidentalTriggers";
             this.CheckBoxAllowAccidentalTriggers.Size = new System.Drawing.Size(261, 17);
             this.CheckBoxAllowAccidentalTriggers.TabIndex = 27;
@@ -213,7 +217,7 @@ namespace HypnosisRandomizer
             // CheckBoxTriggerAfterAwaken
             // 
             this.CheckBoxTriggerAfterAwaken.AutoSize = true;
-            this.CheckBoxTriggerAfterAwaken.Location = new System.Drawing.Point(7, 617);
+            this.CheckBoxTriggerAfterAwaken.Location = new System.Drawing.Point(7, 410);
             this.CheckBoxTriggerAfterAwaken.Name = "CheckBoxTriggerAfterAwaken";
             this.CheckBoxTriggerAfterAwaken.Size = new System.Drawing.Size(276, 17);
             this.CheckBoxTriggerAfterAwaken.TabIndex = 26;
@@ -224,7 +228,7 @@ namespace HypnosisRandomizer
             // CheckBoxAllowObedienceTraining
             // 
             this.CheckBoxAllowObedienceTraining.AutoSize = true;
-            this.CheckBoxAllowObedienceTraining.Location = new System.Drawing.Point(7, 593);
+            this.CheckBoxAllowObedienceTraining.Location = new System.Drawing.Point(338, 8);
             this.CheckBoxAllowObedienceTraining.Name = "CheckBoxAllowObedienceTraining";
             this.CheckBoxAllowObedienceTraining.Size = new System.Drawing.Size(197, 17);
             this.CheckBoxAllowObedienceTraining.TabIndex = 25;
@@ -235,7 +239,7 @@ namespace HypnosisRandomizer
             // CheckBoxAllowPersonalityChangesPermanent
             // 
             this.CheckBoxAllowPersonalityChangesPermanent.AutoSize = true;
-            this.CheckBoxAllowPersonalityChangesPermanent.Location = new System.Drawing.Point(7, 569);
+            this.CheckBoxAllowPersonalityChangesPermanent.Location = new System.Drawing.Point(7, 387);
             this.CheckBoxAllowPersonalityChangesPermanent.Name = "CheckBoxAllowPersonalityChangesPermanent";
             this.CheckBoxAllowPersonalityChangesPermanent.Size = new System.Drawing.Size(209, 17);
             this.CheckBoxAllowPersonalityChangesPermanent.TabIndex = 24;
@@ -246,7 +250,7 @@ namespace HypnosisRandomizer
             // CheckBoxAllowGenericReinforcement
             // 
             this.CheckBoxAllowGenericReinforcement.AutoSize = true;
-            this.CheckBoxAllowGenericReinforcement.Location = new System.Drawing.Point(6, 545);
+            this.CheckBoxAllowGenericReinforcement.Location = new System.Drawing.Point(7, 364);
             this.CheckBoxAllowGenericReinforcement.Name = "CheckBoxAllowGenericReinforcement";
             this.CheckBoxAllowGenericReinforcement.Size = new System.Drawing.Size(163, 17);
             this.CheckBoxAllowGenericReinforcement.TabIndex = 23;
@@ -257,7 +261,7 @@ namespace HypnosisRandomizer
             // CheckBoxAllowPermanentBodyChanges
             // 
             this.CheckBoxAllowPermanentBodyChanges.AutoSize = true;
-            this.CheckBoxAllowPermanentBodyChanges.Location = new System.Drawing.Point(7, 521);
+            this.CheckBoxAllowPermanentBodyChanges.Location = new System.Drawing.Point(6, 341);
             this.CheckBoxAllowPermanentBodyChanges.Name = "CheckBoxAllowPermanentBodyChanges";
             this.CheckBoxAllowPermanentBodyChanges.Size = new System.Drawing.Size(210, 17);
             this.CheckBoxAllowPermanentBodyChanges.TabIndex = 22;
@@ -268,7 +272,7 @@ namespace HypnosisRandomizer
             // CheckBoxAllowLongScripts
             // 
             this.CheckBoxAllowLongScripts.AutoSize = true;
-            this.CheckBoxAllowLongScripts.Location = new System.Drawing.Point(7, 497);
+            this.CheckBoxAllowLongScripts.Location = new System.Drawing.Point(6, 318);
             this.CheckBoxAllowLongScripts.Name = "CheckBoxAllowLongScripts";
             this.CheckBoxAllowLongScripts.Size = new System.Drawing.Size(201, 17);
             this.CheckBoxAllowLongScripts.TabIndex = 21;
@@ -279,7 +283,7 @@ namespace HypnosisRandomizer
             // CheckBoxAllowBodyChangeTriggerInstalls
             // 
             this.CheckBoxAllowBodyChangeTriggerInstalls.AutoSize = true;
-            this.CheckBoxAllowBodyChangeTriggerInstalls.Location = new System.Drawing.Point(7, 473);
+            this.CheckBoxAllowBodyChangeTriggerInstalls.Location = new System.Drawing.Point(6, 272);
             this.CheckBoxAllowBodyChangeTriggerInstalls.Name = "CheckBoxAllowBodyChangeTriggerInstalls";
             this.CheckBoxAllowBodyChangeTriggerInstalls.Size = new System.Drawing.Size(213, 17);
             this.CheckBoxAllowBodyChangeTriggerInstalls.TabIndex = 20;
@@ -290,7 +294,7 @@ namespace HypnosisRandomizer
             // CheckBoxAllowBodyChangesWhileUnder
             // 
             this.CheckBoxAllowBodyChangesWhileUnder.AutoSize = true;
-            this.CheckBoxAllowBodyChangesWhileUnder.Location = new System.Drawing.Point(6, 449);
+            this.CheckBoxAllowBodyChangesWhileUnder.Location = new System.Drawing.Point(6, 249);
             this.CheckBoxAllowBodyChangesWhileUnder.Name = "CheckBoxAllowBodyChangesWhileUnder";
             this.CheckBoxAllowBodyChangesWhileUnder.Size = new System.Drawing.Size(187, 17);
             this.CheckBoxAllowBodyChangesWhileUnder.TabIndex = 19;
@@ -301,7 +305,7 @@ namespace HypnosisRandomizer
             // CheckBoxPermanentChanges
             // 
             this.CheckBoxPermanentChanges.AutoSize = true;
-            this.CheckBoxPermanentChanges.Location = new System.Drawing.Point(7, 425);
+            this.CheckBoxPermanentChanges.Location = new System.Drawing.Point(7, 226);
             this.CheckBoxPermanentChanges.Name = "CheckBoxPermanentChanges";
             this.CheckBoxPermanentChanges.Size = new System.Drawing.Size(249, 17);
             this.CheckBoxPermanentChanges.TabIndex = 18;
@@ -312,7 +316,7 @@ namespace HypnosisRandomizer
             // CheckBoxTrustedScripts
             // 
             this.CheckBoxTrustedScripts.AutoSize = true;
-            this.CheckBoxTrustedScripts.Location = new System.Drawing.Point(6, 401);
+            this.CheckBoxTrustedScripts.Location = new System.Drawing.Point(6, 203);
             this.CheckBoxTrustedScripts.Name = "CheckBoxTrustedScripts";
             this.CheckBoxTrustedScripts.Size = new System.Drawing.Size(305, 17);
             this.CheckBoxTrustedScripts.TabIndex = 17;
@@ -323,7 +327,7 @@ namespace HypnosisRandomizer
             // CheckBoxDeclareFeatures
             // 
             this.CheckBoxDeclareFeatures.AutoSize = true;
-            this.CheckBoxDeclareFeatures.Location = new System.Drawing.Point(7, 377);
+            this.CheckBoxDeclareFeatures.Location = new System.Drawing.Point(6, 180);
             this.CheckBoxDeclareFeatures.Name = "CheckBoxDeclareFeatures";
             this.CheckBoxDeclareFeatures.Size = new System.Drawing.Size(240, 17);
             this.CheckBoxDeclareFeatures.TabIndex = 16;
@@ -334,7 +338,7 @@ namespace HypnosisRandomizer
             // CheckBoxAllowTrustTriggerInstalls
             // 
             this.CheckBoxAllowTrustTriggerInstalls.AutoSize = true;
-            this.CheckBoxAllowTrustTriggerInstalls.Location = new System.Drawing.Point(7, 353);
+            this.CheckBoxAllowTrustTriggerInstalls.Location = new System.Drawing.Point(6, 157);
             this.CheckBoxAllowTrustTriggerInstalls.Name = "CheckBoxAllowTrustTriggerInstalls";
             this.CheckBoxAllowTrustTriggerInstalls.Size = new System.Drawing.Size(307, 17);
             this.CheckBoxAllowTrustTriggerInstalls.TabIndex = 15;
@@ -345,7 +349,7 @@ namespace HypnosisRandomizer
             // CheckBoxAllowOpenTriggerInstalls
             // 
             this.CheckBoxAllowOpenTriggerInstalls.AutoSize = true;
-            this.CheckBoxAllowOpenTriggerInstalls.Location = new System.Drawing.Point(7, 329);
+            this.CheckBoxAllowOpenTriggerInstalls.Location = new System.Drawing.Point(338, 77);
             this.CheckBoxAllowOpenTriggerInstalls.Name = "CheckBoxAllowOpenTriggerInstalls";
             this.CheckBoxAllowOpenTriggerInstalls.Size = new System.Drawing.Size(151, 17);
             this.CheckBoxAllowOpenTriggerInstalls.TabIndex = 14;
@@ -356,7 +360,7 @@ namespace HypnosisRandomizer
             // CheckBoxAllowIQDropWhileUnder
             // 
             this.CheckBoxAllowIQDropWhileUnder.AutoSize = true;
-            this.CheckBoxAllowIQDropWhileUnder.Location = new System.Drawing.Point(7, 306);
+            this.CheckBoxAllowIQDropWhileUnder.Location = new System.Drawing.Point(338, 100);
             this.CheckBoxAllowIQDropWhileUnder.Name = "CheckBoxAllowIQDropWhileUnder";
             this.CheckBoxAllowIQDropWhileUnder.Size = new System.Drawing.Size(153, 17);
             this.CheckBoxAllowIQDropWhileUnder.TabIndex = 13;
@@ -367,7 +371,7 @@ namespace HypnosisRandomizer
             // CheckBoxCustomImmobilizeTrigger
             // 
             this.CheckBoxCustomImmobilizeTrigger.AutoSize = true;
-            this.CheckBoxCustomImmobilizeTrigger.Location = new System.Drawing.Point(7, 282);
+            this.CheckBoxCustomImmobilizeTrigger.Location = new System.Drawing.Point(7, 134);
             this.CheckBoxCustomImmobilizeTrigger.Name = "CheckBoxCustomImmobilizeTrigger";
             this.CheckBoxCustomImmobilizeTrigger.Size = new System.Drawing.Size(263, 17);
             this.CheckBoxCustomImmobilizeTrigger.TabIndex = 12;
@@ -378,7 +382,7 @@ namespace HypnosisRandomizer
             // CheckBoxAllowImmobilityTriggerInstall
             // 
             this.CheckBoxAllowImmobilityTriggerInstall.AutoSize = true;
-            this.CheckBoxAllowImmobilityTriggerInstall.Location = new System.Drawing.Point(7, 258);
+            this.CheckBoxAllowImmobilityTriggerInstall.Location = new System.Drawing.Point(7, 111);
             this.CheckBoxAllowImmobilityTriggerInstall.Name = "CheckBoxAllowImmobilityTriggerInstall";
             this.CheckBoxAllowImmobilityTriggerInstall.Size = new System.Drawing.Size(165, 17);
             this.CheckBoxAllowImmobilityTriggerInstall.TabIndex = 11;
@@ -389,7 +393,7 @@ namespace HypnosisRandomizer
             // CheckBoxAllowImmobilizeUnder
             // 
             this.CheckBoxAllowImmobilizeUnder.AutoSize = true;
-            this.CheckBoxAllowImmobilizeUnder.Location = new System.Drawing.Point(7, 234);
+            this.CheckBoxAllowImmobilizeUnder.Location = new System.Drawing.Point(6, 88);
             this.CheckBoxAllowImmobilizeUnder.Name = "CheckBoxAllowImmobilizeUnder";
             this.CheckBoxAllowImmobilizeUnder.Size = new System.Drawing.Size(161, 17);
             this.CheckBoxAllowImmobilizeUnder.TabIndex = 10;
@@ -400,7 +404,7 @@ namespace HypnosisRandomizer
             // CheckBoxAllowFractionate
             // 
             this.CheckBoxAllowFractionate.AutoSize = true;
-            this.CheckBoxAllowFractionate.Location = new System.Drawing.Point(6, 210);
+            this.CheckBoxAllowFractionate.Location = new System.Drawing.Point(338, 169);
             this.CheckBoxAllowFractionate.Name = "CheckBoxAllowFractionate";
             this.CheckBoxAllowFractionate.Size = new System.Drawing.Size(144, 17);
             this.CheckBoxAllowFractionate.TabIndex = 9;
@@ -411,7 +415,7 @@ namespace HypnosisRandomizer
             // CheckBoxUseAwakener
             // 
             this.CheckBoxUseAwakener.AutoSize = true;
-            this.CheckBoxUseAwakener.Location = new System.Drawing.Point(7, 187);
+            this.CheckBoxUseAwakener.Location = new System.Drawing.Point(6, 65);
             this.CheckBoxUseAwakener.Name = "CheckBoxUseAwakener";
             this.CheckBoxUseAwakener.Size = new System.Drawing.Size(161, 17);
             this.CheckBoxUseAwakener.TabIndex = 8;
@@ -422,7 +426,7 @@ namespace HypnosisRandomizer
             // CheckBoxUseDialogScripts
             // 
             this.CheckBoxUseDialogScripts.AutoSize = true;
-            this.CheckBoxUseDialogScripts.Location = new System.Drawing.Point(7, 163);
+            this.CheckBoxUseDialogScripts.Location = new System.Drawing.Point(338, 54);
             this.CheckBoxUseDialogScripts.Name = "CheckBoxUseDialogScripts";
             this.CheckBoxUseDialogScripts.Size = new System.Drawing.Size(149, 17);
             this.CheckBoxUseDialogScripts.TabIndex = 7;
@@ -433,7 +437,7 @@ namespace HypnosisRandomizer
             // CheckBoxRandomTriggerInstalls
             // 
             this.CheckBoxRandomTriggerInstalls.AutoSize = true;
-            this.CheckBoxRandomTriggerInstalls.Location = new System.Drawing.Point(7, 139);
+            this.CheckBoxRandomTriggerInstalls.Location = new System.Drawing.Point(6, 295);
             this.CheckBoxRandomTriggerInstalls.Name = "CheckBoxRandomTriggerInstalls";
             this.CheckBoxRandomTriggerInstalls.Size = new System.Drawing.Size(202, 17);
             this.CheckBoxRandomTriggerInstalls.TabIndex = 6;
@@ -444,7 +448,7 @@ namespace HypnosisRandomizer
             // CheckBoxIncludeRandomTriggering
             // 
             this.CheckBoxIncludeRandomTriggering.AutoSize = true;
-            this.CheckBoxIncludeRandomTriggering.Location = new System.Drawing.Point(7, 115);
+            this.CheckBoxIncludeRandomTriggering.Location = new System.Drawing.Point(6, 42);
             this.CheckBoxIncludeRandomTriggering.Name = "CheckBoxIncludeRandomTriggering";
             this.CheckBoxIncludeRandomTriggering.Size = new System.Drawing.Size(154, 17);
             this.CheckBoxIncludeRandomTriggering.TabIndex = 5;
@@ -455,7 +459,7 @@ namespace HypnosisRandomizer
             // CheckBoxUseDeepener
             // 
             this.CheckBoxUseDeepener.AutoSize = true;
-            this.CheckBoxUseDeepener.Location = new System.Drawing.Point(7, 91);
+            this.CheckBoxUseDeepener.Location = new System.Drawing.Point(338, 31);
             this.CheckBoxUseDeepener.Name = "CheckBoxUseDeepener";
             this.CheckBoxUseDeepener.Size = new System.Drawing.Size(100, 17);
             this.CheckBoxUseDeepener.TabIndex = 4;
@@ -466,7 +470,7 @@ namespace HypnosisRandomizer
             // CheckBoxUseInduction
             // 
             this.CheckBoxUseInduction.AutoSize = true;
-            this.CheckBoxUseInduction.Location = new System.Drawing.Point(7, 67);
+            this.CheckBoxUseInduction.Location = new System.Drawing.Point(7, 19);
             this.CheckBoxUseInduction.Name = "CheckBoxUseInduction";
             this.CheckBoxUseInduction.Size = new System.Drawing.Size(92, 17);
             this.CheckBoxUseInduction.TabIndex = 3;
@@ -477,7 +481,7 @@ namespace HypnosisRandomizer
             // CheckBoxRewardSegments
             // 
             this.CheckBoxRewardSegments.AutoSize = true;
-            this.CheckBoxRewardSegments.Location = new System.Drawing.Point(7, 43);
+            this.CheckBoxRewardSegments.Location = new System.Drawing.Point(338, 123);
             this.CheckBoxRewardSegments.Name = "CheckBoxRewardSegments";
             this.CheckBoxRewardSegments.Size = new System.Drawing.Size(135, 17);
             this.CheckBoxRewardSegments.TabIndex = 2;
@@ -488,7 +492,7 @@ namespace HypnosisRandomizer
             // CheckBoxPunishSegments
             // 
             this.CheckBoxPunishSegments.AutoSize = true;
-            this.CheckBoxPunishSegments.Location = new System.Drawing.Point(6, 19);
+            this.CheckBoxPunishSegments.Location = new System.Drawing.Point(338, 146);
             this.CheckBoxPunishSegments.Name = "CheckBoxPunishSegments";
             this.CheckBoxPunishSegments.Size = new System.Drawing.Size(130, 17);
             this.CheckBoxPunishSegments.TabIndex = 1;
@@ -516,7 +520,7 @@ namespace HypnosisRandomizer
             this.GroupBoxCustomTriggers.Controls.Add(this.TextBoxRewardTrigger);
             this.GroupBoxCustomTriggers.Controls.Add(this.LabelRewardTrigger);
             this.GroupBoxCustomTriggers.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.GroupBoxCustomTriggers.Location = new System.Drawing.Point(421, 12);
+            this.GroupBoxCustomTriggers.Location = new System.Drawing.Point(551, 8);
             this.GroupBoxCustomTriggers.Name = "GroupBoxCustomTriggers";
             this.GroupBoxCustomTriggers.Size = new System.Drawing.Size(561, 276);
             this.GroupBoxCustomTriggers.TabIndex = 2;
@@ -668,9 +672,9 @@ namespace HypnosisRandomizer
             this.GroupBoxDangerousSettings.Controls.Add(this.CheckBoxChaosModeEnabled);
             this.GroupBoxDangerousSettings.Controls.Add(this.WarningTextBox);
             this.GroupBoxDangerousSettings.ForeColor = System.Drawing.Color.Indigo;
-            this.GroupBoxDangerousSettings.Location = new System.Drawing.Point(421, 294);
+            this.GroupBoxDangerousSettings.Location = new System.Drawing.Point(338, 292);
             this.GroupBoxDangerousSettings.Name = "GroupBoxDangerousSettings";
-            this.GroupBoxDangerousSettings.Size = new System.Drawing.Size(561, 296);
+            this.GroupBoxDangerousSettings.Size = new System.Drawing.Size(422, 227);
             this.GroupBoxDangerousSettings.TabIndex = 3;
             this.GroupBoxDangerousSettings.TabStop = false;
             this.GroupBoxDangerousSettings.Text = "Dangerous Settings";
@@ -679,7 +683,7 @@ namespace HypnosisRandomizer
             // 
             this.CheckBoxAllowRandomScriptLogic.AutoSize = true;
             this.CheckBoxAllowRandomScriptLogic.ForeColor = System.Drawing.Color.Pink;
-            this.CheckBoxAllowRandomScriptLogic.Location = new System.Drawing.Point(11, 263);
+            this.CheckBoxAllowRandomScriptLogic.Location = new System.Drawing.Point(11, 187);
             this.CheckBoxAllowRandomScriptLogic.Name = "CheckBoxAllowRandomScriptLogic";
             this.CheckBoxAllowRandomScriptLogic.Size = new System.Drawing.Size(361, 17);
             this.CheckBoxAllowRandomScriptLogic.TabIndex = 2;
@@ -691,7 +695,7 @@ namespace HypnosisRandomizer
             // 
             this.CheckBoxChaosModeEnabled.AutoSize = true;
             this.CheckBoxChaosModeEnabled.ForeColor = System.Drawing.Color.LightPink;
-            this.CheckBoxChaosModeEnabled.Location = new System.Drawing.Point(11, 240);
+            this.CheckBoxChaosModeEnabled.Location = new System.Drawing.Point(11, 164);
             this.CheckBoxChaosModeEnabled.Name = "CheckBoxChaosModeEnabled";
             this.CheckBoxChaosModeEnabled.Size = new System.Drawing.Size(181, 17);
             this.CheckBoxChaosModeEnabled.TabIndex = 1;
@@ -704,7 +708,7 @@ namespace HypnosisRandomizer
             this.WarningTextBox.Location = new System.Drawing.Point(11, 25);
             this.WarningTextBox.Name = "WarningTextBox";
             this.WarningTextBox.ReadOnly = true;
-            this.WarningTextBox.Size = new System.Drawing.Size(544, 193);
+            this.WarningTextBox.Size = new System.Drawing.Size(397, 133);
             this.WarningTextBox.TabIndex = 0;
             this.WarningTextBox.Text = resources.GetString("WarningTextBox.Text");
             // 
@@ -712,11 +716,8 @@ namespace HypnosisRandomizer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1157, 846);
-            this.Controls.Add(this.GroupBoxDangerousSettings);
-            this.Controls.Add(this.GroupBoxCustomTriggers);
+            this.ClientSize = new System.Drawing.Size(1157, 568);
             this.Controls.Add(this.Preferences);
-            this.Controls.Add(this.GenerateSession);
             this.Name = "Menu";
             this.Text = "Menu";
             this.Preferences.ResumeLayout(false);
