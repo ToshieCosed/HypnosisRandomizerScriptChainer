@@ -29,6 +29,11 @@ namespace HypnosisRandomizer
         public void GenerateGenericSession(int chain_amount)
         {
             string[] Chain_Segments = new string[chain_amount+1];
+                //Fill with blank strings so it doesn't get nulled.
+            for (int i=0; i<chain_amount+1; i++)
+            {
+                Chain_Segments[i] = "";
+            }
 
             //we basically want to get all of the types of induction and awakener (anyway)
             Inductions_List = MakeScriptListWithFeature(Base_Pool, Program.ScriptFeatures.IsInduction);
@@ -89,19 +94,28 @@ namespace HypnosisRandomizer
 
                     case "TriggeringSegment":
                         ScriptRepresentation Trig_Script = FetchRandom(Triggering_List);
-                        Session_List.Add(Trig_Script);
-                        //Patched so we remove scripts from the base pool after they have been included.
-                        Base_Pool.Remove(Trig_Script);
+                        if (Trig_Script.FileName != "NoProperty")
+                        {
+                            Session_List.Add(Trig_Script);
+                            //Patched so we remove scripts from the base pool after they have been included.
+                            Base_Pool.Remove(Trig_Script);
+                        }
                         break;
 
                     case "Awakener":
                         ScriptRepresentation Awaken_Script = FetchRandom(Awakening_List);
+                        if (Awaken_Script.FileName != "NoProperty")
+                        { 
                         Session_List.Add(Awaken_Script);
+                        }
                         break;
 
                     case "Induction":
                         ScriptRepresentation Induction = FetchRandom(Inductions_List);
-                        Session_List.Add(Induction);
+                        if (Induction.FileName != "NoProperty")
+                        {
+                            Session_List.Add(Induction);
+                        }
                         break;
 
                 }
@@ -207,7 +221,7 @@ namespace HypnosisRandomizer
                         foreach(Program.ScriptFeatures feature in localfeatures)
                 {
                        
-                           if (!Program.userpreferences.HasFeatureAsEnum(feature)){
+                           if (!Program.userpreferences.HasFeatureAsEnum(feature) && feature!= Program.ScriptFeatures.IncludeInMazeModePool){
                            copy_script = false;
                     }
 

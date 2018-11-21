@@ -33,7 +33,31 @@ namespace HypnosisRandomizer
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.GenerateSession = new System.Windows.Forms.Button();
             this.Preferences = new System.Windows.Forms.GroupBox();
+            this.GroupBoxMazeModeSettings = new System.Windows.Forms.GroupBox();
+            this.TextBoxMazeMode = new System.Windows.Forms.RichTextBox();
+            this.CheckBoxMazeMode = new System.Windows.Forms.CheckBox();
+            this.GroupBoxDangerousSettings = new System.Windows.Forms.GroupBox();
+            this.CheckBoxAllowRandomScriptLogic = new System.Windows.Forms.CheckBox();
+            this.CheckBoxChaosModeEnabled = new System.Windows.Forms.CheckBox();
+            this.WarningTextBox = new System.Windows.Forms.RichTextBox();
             this.CheckBoxUseName = new System.Windows.Forms.CheckBox();
+            this.GroupBoxCustomTriggers = new System.Windows.Forms.GroupBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.LabelMasterTitle = new System.Windows.Forms.Label();
+            this.TextBoxName = new System.Windows.Forms.TextBox();
+            this.LabelSubjectName = new System.Windows.Forms.Label();
+            this.TextBoxReMobilizeTrigger = new System.Windows.Forms.TextBox();
+            this.LabelReMobilizeTrigger = new System.Windows.Forms.Label();
+            this.TextBoxImmobilizeTrigger = new System.Windows.Forms.TextBox();
+            this.LabelCustomImmobile = new System.Windows.Forms.Label();
+            this.TextBoxTeaseTrigger = new System.Windows.Forms.TextBox();
+            this.LabelTeaseTrigger = new System.Windows.Forms.Label();
+            this.TextBoxDropTrigger = new System.Windows.Forms.TextBox();
+            this.LabelDropTrigger = new System.Windows.Forms.Label();
+            this.TextBoxPunishTrigger = new System.Windows.Forms.TextBox();
+            this.LabelPunishTrigger = new System.Windows.Forms.Label();
+            this.TextBoxRewardTrigger = new System.Windows.Forms.TextBox();
+            this.LabelRewardTrigger = new System.Windows.Forms.Label();
             this.CheckBoxAllowSlaveryBrainWash = new System.Windows.Forms.CheckBox();
             this.CheckBoxAllowMasturbation = new System.Windows.Forms.CheckBox();
             this.CheckBoxAllowStrip = new System.Windows.Forms.CheckBox();
@@ -65,36 +89,17 @@ namespace HypnosisRandomizer
             this.CheckBoxUseInduction = new System.Windows.Forms.CheckBox();
             this.CheckBoxRewardSegments = new System.Windows.Forms.CheckBox();
             this.CheckBoxPunishSegments = new System.Windows.Forms.CheckBox();
-            this.GroupBoxCustomTriggers = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.LabelMasterTitle = new System.Windows.Forms.Label();
-            this.TextBoxName = new System.Windows.Forms.TextBox();
-            this.LabelSubjectName = new System.Windows.Forms.Label();
-            this.TextBoxReMobilizeTrigger = new System.Windows.Forms.TextBox();
-            this.LabelReMobilizeTrigger = new System.Windows.Forms.Label();
-            this.TextBoxImmobilizeTrigger = new System.Windows.Forms.TextBox();
-            this.LabelCustomImmobile = new System.Windows.Forms.Label();
-            this.TextBoxTeaseTrigger = new System.Windows.Forms.TextBox();
-            this.LabelTeaseTrigger = new System.Windows.Forms.Label();
-            this.TextBoxDropTrigger = new System.Windows.Forms.TextBox();
-            this.LabelDropTrigger = new System.Windows.Forms.Label();
-            this.TextBoxPunishTrigger = new System.Windows.Forms.TextBox();
-            this.LabelPunishTrigger = new System.Windows.Forms.Label();
-            this.TextBoxRewardTrigger = new System.Windows.Forms.TextBox();
-            this.LabelRewardTrigger = new System.Windows.Forms.Label();
-            this.GroupBoxDangerousSettings = new System.Windows.Forms.GroupBox();
-            this.CheckBoxAllowRandomScriptLogic = new System.Windows.Forms.CheckBox();
-            this.CheckBoxChaosModeEnabled = new System.Windows.Forms.CheckBox();
-            this.WarningTextBox = new System.Windows.Forms.RichTextBox();
+            this.CheckBoxMazeModeOnlyImprt = new System.Windows.Forms.CheckBox();
             this.Preferences.SuspendLayout();
-            this.GroupBoxCustomTriggers.SuspendLayout();
+            this.GroupBoxMazeModeSettings.SuspendLayout();
             this.GroupBoxDangerousSettings.SuspendLayout();
+            this.GroupBoxCustomTriggers.SuspendLayout();
             this.SuspendLayout();
             // 
             // GenerateSession
             // 
-            this.GenerateSession.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.GenerateSession.Location = new System.Drawing.Point(981, 456);
+            this.GenerateSession.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.GenerateSession.Location = new System.Drawing.Point(974, 459);
             this.GenerateSession.Name = "GenerateSession";
             this.GenerateSession.Size = new System.Drawing.Size(147, 82);
             this.GenerateSession.TabIndex = 0;
@@ -105,6 +110,8 @@ namespace HypnosisRandomizer
             // Preferences
             // 
             this.Preferences.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.Preferences.Controls.Add(this.CheckBoxMazeModeOnlyImprt);
+            this.Preferences.Controls.Add(this.GroupBoxMazeModeSettings);
             this.Preferences.Controls.Add(this.GroupBoxDangerousSettings);
             this.Preferences.Controls.Add(this.GenerateSession);
             this.Preferences.Controls.Add(this.CheckBoxUseName);
@@ -141,12 +148,94 @@ namespace HypnosisRandomizer
             this.Preferences.Controls.Add(this.CheckBoxRewardSegments);
             this.Preferences.Controls.Add(this.CheckBoxPunishSegments);
             this.Preferences.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.Preferences.Location = new System.Drawing.Point(11, 12);
+            this.Preferences.Location = new System.Drawing.Point(10, 6);
             this.Preferences.Name = "Preferences";
-            this.Preferences.Size = new System.Drawing.Size(1134, 551);
+            this.Preferences.Size = new System.Drawing.Size(1126, 551);
             this.Preferences.TabIndex = 1;
             this.Preferences.TabStop = false;
             this.Preferences.Text = "Preferences";
+            // 
+            // GroupBoxMazeModeSettings
+            // 
+            this.GroupBoxMazeModeSettings.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.GroupBoxMazeModeSettings.Controls.Add(this.TextBoxMazeMode);
+            this.GroupBoxMazeModeSettings.Controls.Add(this.CheckBoxMazeMode);
+            this.GroupBoxMazeModeSettings.Location = new System.Drawing.Point(775, 272);
+            this.GroupBoxMazeModeSettings.Margin = new System.Windows.Forms.Padding(2);
+            this.GroupBoxMazeModeSettings.Name = "GroupBoxMazeModeSettings";
+            this.GroupBoxMazeModeSettings.Padding = new System.Windows.Forms.Padding(2);
+            this.GroupBoxMazeModeSettings.Size = new System.Drawing.Size(338, 158);
+            this.GroupBoxMazeModeSettings.TabIndex = 34;
+            this.GroupBoxMazeModeSettings.TabStop = false;
+            this.GroupBoxMazeModeSettings.Text = "Maze Mode Settings";
+            // 
+            // TextBoxMazeMode
+            // 
+            this.TextBoxMazeMode.Location = new System.Drawing.Point(0, 21);
+            this.TextBoxMazeMode.Margin = new System.Windows.Forms.Padding(2);
+            this.TextBoxMazeMode.Name = "TextBoxMazeMode";
+            this.TextBoxMazeMode.Size = new System.Drawing.Size(313, 102);
+            this.TextBoxMazeMode.TabIndex = 34;
+            this.TextBoxMazeMode.Text = resources.GetString("TextBoxMazeMode.Text");
+            // 
+            // CheckBoxMazeMode
+            // 
+            this.CheckBoxMazeMode.AutoSize = true;
+            this.CheckBoxMazeMode.Location = new System.Drawing.Point(4, 127);
+            this.CheckBoxMazeMode.Margin = new System.Windows.Forms.Padding(2);
+            this.CheckBoxMazeMode.Name = "CheckBoxMazeMode";
+            this.CheckBoxMazeMode.Size = new System.Drawing.Size(118, 17);
+            this.CheckBoxMazeMode.TabIndex = 33;
+            this.CheckBoxMazeMode.Text = "Enable Maze Mode";
+            this.CheckBoxMazeMode.UseVisualStyleBackColor = true;
+            this.CheckBoxMazeMode.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged_1);
+            // 
+            // GroupBoxDangerousSettings
+            // 
+            this.GroupBoxDangerousSettings.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.GroupBoxDangerousSettings.Controls.Add(this.CheckBoxAllowRandomScriptLogic);
+            this.GroupBoxDangerousSettings.Controls.Add(this.CheckBoxChaosModeEnabled);
+            this.GroupBoxDangerousSettings.Controls.Add(this.WarningTextBox);
+            this.GroupBoxDangerousSettings.ForeColor = System.Drawing.Color.Indigo;
+            this.GroupBoxDangerousSettings.Location = new System.Drawing.Point(338, 272);
+            this.GroupBoxDangerousSettings.Name = "GroupBoxDangerousSettings";
+            this.GroupBoxDangerousSettings.Size = new System.Drawing.Size(422, 269);
+            this.GroupBoxDangerousSettings.TabIndex = 3;
+            this.GroupBoxDangerousSettings.TabStop = false;
+            this.GroupBoxDangerousSettings.Text = "Dangerous Settings";
+            // 
+            // CheckBoxAllowRandomScriptLogic
+            // 
+            this.CheckBoxAllowRandomScriptLogic.AutoSize = true;
+            this.CheckBoxAllowRandomScriptLogic.ForeColor = System.Drawing.Color.Pink;
+            this.CheckBoxAllowRandomScriptLogic.Location = new System.Drawing.Point(11, 187);
+            this.CheckBoxAllowRandomScriptLogic.Name = "CheckBoxAllowRandomScriptLogic";
+            this.CheckBoxAllowRandomScriptLogic.Size = new System.Drawing.Size(361, 17);
+            this.CheckBoxAllowRandomScriptLogic.TabIndex = 2;
+            this.CheckBoxAllowRandomScriptLogic.Text = "Allow Random Scripts (with logic) -IGNORES PREFS for random scripts";
+            this.CheckBoxAllowRandomScriptLogic.UseVisualStyleBackColor = true;
+            this.CheckBoxAllowRandomScriptLogic.CheckedChanged += new System.EventHandler(this.CheckBoxAllowRandomScriptLogic_CheckedChanged);
+            // 
+            // CheckBoxChaosModeEnabled
+            // 
+            this.CheckBoxChaosModeEnabled.AutoSize = true;
+            this.CheckBoxChaosModeEnabled.ForeColor = System.Drawing.Color.LightPink;
+            this.CheckBoxChaosModeEnabled.Location = new System.Drawing.Point(11, 164);
+            this.CheckBoxChaosModeEnabled.Name = "CheckBoxChaosModeEnabled";
+            this.CheckBoxChaosModeEnabled.Size = new System.Drawing.Size(181, 17);
+            this.CheckBoxChaosModeEnabled.TabIndex = 1;
+            this.CheckBoxChaosModeEnabled.Text = "Enable Chaos Mode (dangerous)";
+            this.CheckBoxChaosModeEnabled.UseVisualStyleBackColor = true;
+            this.CheckBoxChaosModeEnabled.CheckedChanged += new System.EventHandler(this.CheckBoxChaosModeEnabled_CheckedChanged);
+            // 
+            // WarningTextBox
+            // 
+            this.WarningTextBox.Location = new System.Drawing.Point(11, 25);
+            this.WarningTextBox.Name = "WarningTextBox";
+            this.WarningTextBox.ReadOnly = true;
+            this.WarningTextBox.Size = new System.Drawing.Size(397, 133);
+            this.WarningTextBox.TabIndex = 0;
+            this.WarningTextBox.Text = resources.GetString("WarningTextBox.Text");
             // 
             // CheckBoxUseName
             // 
@@ -158,6 +247,171 @@ namespace HypnosisRandomizer
             this.CheckBoxUseName.Text = "Allow Segments That Use Your Name";
             this.CheckBoxUseName.UseVisualStyleBackColor = true;
             this.CheckBoxUseName.CheckedChanged += new System.EventHandler(this.CheckBoxUseName_CheckedChanged);
+            // 
+            // GroupBoxCustomTriggers
+            // 
+            this.GroupBoxCustomTriggers.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.GroupBoxCustomTriggers.Controls.Add(this.textBox2);
+            this.GroupBoxCustomTriggers.Controls.Add(this.LabelMasterTitle);
+            this.GroupBoxCustomTriggers.Controls.Add(this.TextBoxName);
+            this.GroupBoxCustomTriggers.Controls.Add(this.LabelSubjectName);
+            this.GroupBoxCustomTriggers.Controls.Add(this.TextBoxReMobilizeTrigger);
+            this.GroupBoxCustomTriggers.Controls.Add(this.LabelReMobilizeTrigger);
+            this.GroupBoxCustomTriggers.Controls.Add(this.TextBoxImmobilizeTrigger);
+            this.GroupBoxCustomTriggers.Controls.Add(this.LabelCustomImmobile);
+            this.GroupBoxCustomTriggers.Controls.Add(this.TextBoxTeaseTrigger);
+            this.GroupBoxCustomTriggers.Controls.Add(this.LabelTeaseTrigger);
+            this.GroupBoxCustomTriggers.Controls.Add(this.TextBoxDropTrigger);
+            this.GroupBoxCustomTriggers.Controls.Add(this.LabelDropTrigger);
+            this.GroupBoxCustomTriggers.Controls.Add(this.TextBoxPunishTrigger);
+            this.GroupBoxCustomTriggers.Controls.Add(this.LabelPunishTrigger);
+            this.GroupBoxCustomTriggers.Controls.Add(this.TextBoxRewardTrigger);
+            this.GroupBoxCustomTriggers.Controls.Add(this.LabelRewardTrigger);
+            this.GroupBoxCustomTriggers.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.GroupBoxCustomTriggers.Location = new System.Drawing.Point(551, 8);
+            this.GroupBoxCustomTriggers.Name = "GroupBoxCustomTriggers";
+            this.GroupBoxCustomTriggers.Size = new System.Drawing.Size(561, 258);
+            this.GroupBoxCustomTriggers.TabIndex = 2;
+            this.GroupBoxCustomTriggers.TabStop = false;
+            this.GroupBoxCustomTriggers.Text = "Custom Triggers";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(189, 221);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(366, 20);
+            this.textBox2.TabIndex = 15;
+            // 
+            // LabelMasterTitle
+            // 
+            this.LabelMasterTitle.AutoSize = true;
+            this.LabelMasterTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelMasterTitle.Location = new System.Drawing.Point(7, 221);
+            this.LabelMasterTitle.Name = "LabelMasterTitle";
+            this.LabelMasterTitle.Size = new System.Drawing.Size(147, 20);
+            this.LabelMasterTitle.TabIndex = 14;
+            this.LabelMasterTitle.Text = "Owners Title(if any):";
+            // 
+            // TextBoxName
+            // 
+            this.TextBoxName.Location = new System.Drawing.Point(189, 188);
+            this.TextBoxName.Name = "TextBoxName";
+            this.TextBoxName.Size = new System.Drawing.Size(366, 20);
+            this.TextBoxName.TabIndex = 13;
+            // 
+            // LabelSubjectName
+            // 
+            this.LabelSubjectName.AutoSize = true;
+            this.LabelSubjectName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelSubjectName.Location = new System.Drawing.Point(6, 188);
+            this.LabelSubjectName.Name = "LabelSubjectName";
+            this.LabelSubjectName.Size = new System.Drawing.Size(93, 20);
+            this.LabelSubjectName.TabIndex = 12;
+            this.LabelSubjectName.Text = "Your Name:";
+            // 
+            // TextBoxReMobilizeTrigger
+            // 
+            this.TextBoxReMobilizeTrigger.Location = new System.Drawing.Point(189, 159);
+            this.TextBoxReMobilizeTrigger.Name = "TextBoxReMobilizeTrigger";
+            this.TextBoxReMobilizeTrigger.Size = new System.Drawing.Size(366, 20);
+            this.TextBoxReMobilizeTrigger.TabIndex = 11;
+            // 
+            // LabelReMobilizeTrigger
+            // 
+            this.LabelReMobilizeTrigger.AutoSize = true;
+            this.LabelReMobilizeTrigger.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelReMobilizeTrigger.Location = new System.Drawing.Point(6, 159);
+            this.LabelReMobilizeTrigger.Name = "LabelReMobilizeTrigger";
+            this.LabelReMobilizeTrigger.Size = new System.Drawing.Size(132, 20);
+            this.LabelReMobilizeTrigger.TabIndex = 10;
+            this.LabelReMobilizeTrigger.Text = "Unfreeze Trigger:";
+            // 
+            // TextBoxImmobilizeTrigger
+            // 
+            this.TextBoxImmobilizeTrigger.Location = new System.Drawing.Point(189, 126);
+            this.TextBoxImmobilizeTrigger.Name = "TextBoxImmobilizeTrigger";
+            this.TextBoxImmobilizeTrigger.Size = new System.Drawing.Size(366, 20);
+            this.TextBoxImmobilizeTrigger.TabIndex = 9;
+            // 
+            // LabelCustomImmobile
+            // 
+            this.LabelCustomImmobile.AutoSize = true;
+            this.LabelCustomImmobile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelCustomImmobile.Location = new System.Drawing.Point(6, 126);
+            this.LabelCustomImmobile.Name = "LabelCustomImmobile";
+            this.LabelCustomImmobile.Size = new System.Drawing.Size(116, 20);
+            this.LabelCustomImmobile.TabIndex = 8;
+            this.LabelCustomImmobile.Text = "Freeze Trigger:";
+            // 
+            // TextBoxTeaseTrigger
+            // 
+            this.TextBoxTeaseTrigger.Location = new System.Drawing.Point(189, 97);
+            this.TextBoxTeaseTrigger.Name = "TextBoxTeaseTrigger";
+            this.TextBoxTeaseTrigger.Size = new System.Drawing.Size(366, 20);
+            this.TextBoxTeaseTrigger.TabIndex = 7;
+            // 
+            // LabelTeaseTrigger
+            // 
+            this.LabelTeaseTrigger.AutoSize = true;
+            this.LabelTeaseTrigger.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelTeaseTrigger.Location = new System.Drawing.Point(6, 97);
+            this.LabelTeaseTrigger.Name = "LabelTeaseTrigger";
+            this.LabelTeaseTrigger.Size = new System.Drawing.Size(110, 20);
+            this.LabelTeaseTrigger.TabIndex = 6;
+            this.LabelTeaseTrigger.Text = "Tease Trigger:";
+            this.LabelTeaseTrigger.Click += new System.EventHandler(this.LabelTeaseTrigger_Click);
+            // 
+            // TextBoxDropTrigger
+            // 
+            this.TextBoxDropTrigger.Location = new System.Drawing.Point(189, 71);
+            this.TextBoxDropTrigger.Name = "TextBoxDropTrigger";
+            this.TextBoxDropTrigger.Size = new System.Drawing.Size(366, 20);
+            this.TextBoxDropTrigger.TabIndex = 5;
+            // 
+            // LabelDropTrigger
+            // 
+            this.LabelDropTrigger.AutoSize = true;
+            this.LabelDropTrigger.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelDropTrigger.Location = new System.Drawing.Point(7, 71);
+            this.LabelDropTrigger.Name = "LabelDropTrigger";
+            this.LabelDropTrigger.Size = new System.Drawing.Size(101, 20);
+            this.LabelDropTrigger.TabIndex = 4;
+            this.LabelDropTrigger.Text = "Drop Trigger:";
+            this.LabelDropTrigger.Click += new System.EventHandler(this.LabelDropTrigger_Click);
+            // 
+            // TextBoxPunishTrigger
+            // 
+            this.TextBoxPunishTrigger.Location = new System.Drawing.Point(189, 45);
+            this.TextBoxPunishTrigger.Name = "TextBoxPunishTrigger";
+            this.TextBoxPunishTrigger.Size = new System.Drawing.Size(366, 20);
+            this.TextBoxPunishTrigger.TabIndex = 3;
+            // 
+            // LabelPunishTrigger
+            // 
+            this.LabelPunishTrigger.AutoSize = true;
+            this.LabelPunishTrigger.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelPunishTrigger.Location = new System.Drawing.Point(7, 45);
+            this.LabelPunishTrigger.Name = "LabelPunishTrigger";
+            this.LabelPunishTrigger.Size = new System.Drawing.Size(114, 20);
+            this.LabelPunishTrigger.TabIndex = 2;
+            this.LabelPunishTrigger.Text = "Punish Trigger:";
+            // 
+            // TextBoxRewardTrigger
+            // 
+            this.TextBoxRewardTrigger.Location = new System.Drawing.Point(189, 19);
+            this.TextBoxRewardTrigger.Name = "TextBoxRewardTrigger";
+            this.TextBoxRewardTrigger.Size = new System.Drawing.Size(366, 20);
+            this.TextBoxRewardTrigger.TabIndex = 1;
+            // 
+            // LabelRewardTrigger
+            // 
+            this.LabelRewardTrigger.AutoSize = true;
+            this.LabelRewardTrigger.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelRewardTrigger.Location = new System.Drawing.Point(7, 20);
+            this.LabelRewardTrigger.Name = "LabelRewardTrigger";
+            this.LabelRewardTrigger.Size = new System.Drawing.Size(121, 20);
+            this.LabelRewardTrigger.TabIndex = 0;
+            this.LabelRewardTrigger.Text = "Reward Trigger:";
             // 
             // CheckBoxAllowSlaveryBrainWash
             // 
@@ -500,232 +754,33 @@ namespace HypnosisRandomizer
             this.CheckBoxPunishSegments.UseVisualStyleBackColor = true;
             this.CheckBoxPunishSegments.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
-            // GroupBoxCustomTriggers
+            // CheckBoxMazeModeOnlyImprt
             // 
-            this.GroupBoxCustomTriggers.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.GroupBoxCustomTriggers.Controls.Add(this.textBox2);
-            this.GroupBoxCustomTriggers.Controls.Add(this.LabelMasterTitle);
-            this.GroupBoxCustomTriggers.Controls.Add(this.TextBoxName);
-            this.GroupBoxCustomTriggers.Controls.Add(this.LabelSubjectName);
-            this.GroupBoxCustomTriggers.Controls.Add(this.TextBoxReMobilizeTrigger);
-            this.GroupBoxCustomTriggers.Controls.Add(this.LabelReMobilizeTrigger);
-            this.GroupBoxCustomTriggers.Controls.Add(this.TextBoxImmobilizeTrigger);
-            this.GroupBoxCustomTriggers.Controls.Add(this.LabelCustomImmobile);
-            this.GroupBoxCustomTriggers.Controls.Add(this.TextBoxTeaseTrigger);
-            this.GroupBoxCustomTriggers.Controls.Add(this.LabelTeaseTrigger);
-            this.GroupBoxCustomTriggers.Controls.Add(this.TextBoxDropTrigger);
-            this.GroupBoxCustomTriggers.Controls.Add(this.LabelDropTrigger);
-            this.GroupBoxCustomTriggers.Controls.Add(this.TextBoxPunishTrigger);
-            this.GroupBoxCustomTriggers.Controls.Add(this.LabelPunishTrigger);
-            this.GroupBoxCustomTriggers.Controls.Add(this.TextBoxRewardTrigger);
-            this.GroupBoxCustomTriggers.Controls.Add(this.LabelRewardTrigger);
-            this.GroupBoxCustomTriggers.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.GroupBoxCustomTriggers.Location = new System.Drawing.Point(551, 8);
-            this.GroupBoxCustomTriggers.Name = "GroupBoxCustomTriggers";
-            this.GroupBoxCustomTriggers.Size = new System.Drawing.Size(561, 276);
-            this.GroupBoxCustomTriggers.TabIndex = 2;
-            this.GroupBoxCustomTriggers.TabStop = false;
-            this.GroupBoxCustomTriggers.Text = "Custom Triggers";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(189, 221);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(366, 20);
-            this.textBox2.TabIndex = 15;
-            // 
-            // LabelMasterTitle
-            // 
-            this.LabelMasterTitle.AutoSize = true;
-            this.LabelMasterTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelMasterTitle.Location = new System.Drawing.Point(7, 221);
-            this.LabelMasterTitle.Name = "LabelMasterTitle";
-            this.LabelMasterTitle.Size = new System.Drawing.Size(147, 20);
-            this.LabelMasterTitle.TabIndex = 14;
-            this.LabelMasterTitle.Text = "Owners Title(if any):";
-            // 
-            // TextBoxName
-            // 
-            this.TextBoxName.Location = new System.Drawing.Point(189, 188);
-            this.TextBoxName.Name = "TextBoxName";
-            this.TextBoxName.Size = new System.Drawing.Size(366, 20);
-            this.TextBoxName.TabIndex = 13;
-            // 
-            // LabelSubjectName
-            // 
-            this.LabelSubjectName.AutoSize = true;
-            this.LabelSubjectName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelSubjectName.Location = new System.Drawing.Point(6, 188);
-            this.LabelSubjectName.Name = "LabelSubjectName";
-            this.LabelSubjectName.Size = new System.Drawing.Size(93, 20);
-            this.LabelSubjectName.TabIndex = 12;
-            this.LabelSubjectName.Text = "Your Name:";
-            // 
-            // TextBoxReMobilizeTrigger
-            // 
-            this.TextBoxReMobilizeTrigger.Location = new System.Drawing.Point(189, 159);
-            this.TextBoxReMobilizeTrigger.Name = "TextBoxReMobilizeTrigger";
-            this.TextBoxReMobilizeTrigger.Size = new System.Drawing.Size(366, 20);
-            this.TextBoxReMobilizeTrigger.TabIndex = 11;
-            // 
-            // LabelReMobilizeTrigger
-            // 
-            this.LabelReMobilizeTrigger.AutoSize = true;
-            this.LabelReMobilizeTrigger.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelReMobilizeTrigger.Location = new System.Drawing.Point(6, 159);
-            this.LabelReMobilizeTrigger.Name = "LabelReMobilizeTrigger";
-            this.LabelReMobilizeTrigger.Size = new System.Drawing.Size(132, 20);
-            this.LabelReMobilizeTrigger.TabIndex = 10;
-            this.LabelReMobilizeTrigger.Text = "Unfreeze Trigger:";
-            // 
-            // TextBoxImmobilizeTrigger
-            // 
-            this.TextBoxImmobilizeTrigger.Location = new System.Drawing.Point(189, 126);
-            this.TextBoxImmobilizeTrigger.Name = "TextBoxImmobilizeTrigger";
-            this.TextBoxImmobilizeTrigger.Size = new System.Drawing.Size(366, 20);
-            this.TextBoxImmobilizeTrigger.TabIndex = 9;
-            // 
-            // LabelCustomImmobile
-            // 
-            this.LabelCustomImmobile.AutoSize = true;
-            this.LabelCustomImmobile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelCustomImmobile.Location = new System.Drawing.Point(6, 126);
-            this.LabelCustomImmobile.Name = "LabelCustomImmobile";
-            this.LabelCustomImmobile.Size = new System.Drawing.Size(116, 20);
-            this.LabelCustomImmobile.TabIndex = 8;
-            this.LabelCustomImmobile.Text = "Freeze Trigger:";
-            // 
-            // TextBoxTeaseTrigger
-            // 
-            this.TextBoxTeaseTrigger.Location = new System.Drawing.Point(189, 97);
-            this.TextBoxTeaseTrigger.Name = "TextBoxTeaseTrigger";
-            this.TextBoxTeaseTrigger.Size = new System.Drawing.Size(366, 20);
-            this.TextBoxTeaseTrigger.TabIndex = 7;
-            // 
-            // LabelTeaseTrigger
-            // 
-            this.LabelTeaseTrigger.AutoSize = true;
-            this.LabelTeaseTrigger.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelTeaseTrigger.Location = new System.Drawing.Point(6, 97);
-            this.LabelTeaseTrigger.Name = "LabelTeaseTrigger";
-            this.LabelTeaseTrigger.Size = new System.Drawing.Size(110, 20);
-            this.LabelTeaseTrigger.TabIndex = 6;
-            this.LabelTeaseTrigger.Text = "Tease Trigger:";
-            this.LabelTeaseTrigger.Click += new System.EventHandler(this.LabelTeaseTrigger_Click);
-            // 
-            // TextBoxDropTrigger
-            // 
-            this.TextBoxDropTrigger.Location = new System.Drawing.Point(189, 71);
-            this.TextBoxDropTrigger.Name = "TextBoxDropTrigger";
-            this.TextBoxDropTrigger.Size = new System.Drawing.Size(366, 20);
-            this.TextBoxDropTrigger.TabIndex = 5;
-            // 
-            // LabelDropTrigger
-            // 
-            this.LabelDropTrigger.AutoSize = true;
-            this.LabelDropTrigger.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelDropTrigger.Location = new System.Drawing.Point(7, 71);
-            this.LabelDropTrigger.Name = "LabelDropTrigger";
-            this.LabelDropTrigger.Size = new System.Drawing.Size(101, 20);
-            this.LabelDropTrigger.TabIndex = 4;
-            this.LabelDropTrigger.Text = "Drop Trigger:";
-            this.LabelDropTrigger.Click += new System.EventHandler(this.LabelDropTrigger_Click);
-            // 
-            // TextBoxPunishTrigger
-            // 
-            this.TextBoxPunishTrigger.Location = new System.Drawing.Point(189, 45);
-            this.TextBoxPunishTrigger.Name = "TextBoxPunishTrigger";
-            this.TextBoxPunishTrigger.Size = new System.Drawing.Size(366, 20);
-            this.TextBoxPunishTrigger.TabIndex = 3;
-            // 
-            // LabelPunishTrigger
-            // 
-            this.LabelPunishTrigger.AutoSize = true;
-            this.LabelPunishTrigger.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelPunishTrigger.Location = new System.Drawing.Point(7, 45);
-            this.LabelPunishTrigger.Name = "LabelPunishTrigger";
-            this.LabelPunishTrigger.Size = new System.Drawing.Size(114, 20);
-            this.LabelPunishTrigger.TabIndex = 2;
-            this.LabelPunishTrigger.Text = "Punish Trigger:";
-            // 
-            // TextBoxRewardTrigger
-            // 
-            this.TextBoxRewardTrigger.Location = new System.Drawing.Point(189, 19);
-            this.TextBoxRewardTrigger.Name = "TextBoxRewardTrigger";
-            this.TextBoxRewardTrigger.Size = new System.Drawing.Size(366, 20);
-            this.TextBoxRewardTrigger.TabIndex = 1;
-            // 
-            // LabelRewardTrigger
-            // 
-            this.LabelRewardTrigger.AutoSize = true;
-            this.LabelRewardTrigger.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelRewardTrigger.Location = new System.Drawing.Point(7, 20);
-            this.LabelRewardTrigger.Name = "LabelRewardTrigger";
-            this.LabelRewardTrigger.Size = new System.Drawing.Size(121, 20);
-            this.LabelRewardTrigger.TabIndex = 0;
-            this.LabelRewardTrigger.Text = "Reward Trigger:";
-            // 
-            // GroupBoxDangerousSettings
-            // 
-            this.GroupBoxDangerousSettings.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.GroupBoxDangerousSettings.Controls.Add(this.CheckBoxAllowRandomScriptLogic);
-            this.GroupBoxDangerousSettings.Controls.Add(this.CheckBoxChaosModeEnabled);
-            this.GroupBoxDangerousSettings.Controls.Add(this.WarningTextBox);
-            this.GroupBoxDangerousSettings.ForeColor = System.Drawing.Color.Indigo;
-            this.GroupBoxDangerousSettings.Location = new System.Drawing.Point(338, 292);
-            this.GroupBoxDangerousSettings.Name = "GroupBoxDangerousSettings";
-            this.GroupBoxDangerousSettings.Size = new System.Drawing.Size(422, 227);
-            this.GroupBoxDangerousSettings.TabIndex = 3;
-            this.GroupBoxDangerousSettings.TabStop = false;
-            this.GroupBoxDangerousSettings.Text = "Dangerous Settings";
-            // 
-            // CheckBoxAllowRandomScriptLogic
-            // 
-            this.CheckBoxAllowRandomScriptLogic.AutoSize = true;
-            this.CheckBoxAllowRandomScriptLogic.ForeColor = System.Drawing.Color.Pink;
-            this.CheckBoxAllowRandomScriptLogic.Location = new System.Drawing.Point(11, 187);
-            this.CheckBoxAllowRandomScriptLogic.Name = "CheckBoxAllowRandomScriptLogic";
-            this.CheckBoxAllowRandomScriptLogic.Size = new System.Drawing.Size(361, 17);
-            this.CheckBoxAllowRandomScriptLogic.TabIndex = 2;
-            this.CheckBoxAllowRandomScriptLogic.Text = "Allow Random Scripts (with logic) -IGNORES PREFS for random scripts";
-            this.CheckBoxAllowRandomScriptLogic.UseVisualStyleBackColor = true;
-            this.CheckBoxAllowRandomScriptLogic.CheckedChanged += new System.EventHandler(this.CheckBoxAllowRandomScriptLogic_CheckedChanged);
-            // 
-            // CheckBoxChaosModeEnabled
-            // 
-            this.CheckBoxChaosModeEnabled.AutoSize = true;
-            this.CheckBoxChaosModeEnabled.ForeColor = System.Drawing.Color.LightPink;
-            this.CheckBoxChaosModeEnabled.Location = new System.Drawing.Point(11, 164);
-            this.CheckBoxChaosModeEnabled.Name = "CheckBoxChaosModeEnabled";
-            this.CheckBoxChaosModeEnabled.Size = new System.Drawing.Size(181, 17);
-            this.CheckBoxChaosModeEnabled.TabIndex = 1;
-            this.CheckBoxChaosModeEnabled.Text = "Enable Chaos Mode (dangerous)";
-            this.CheckBoxChaosModeEnabled.UseVisualStyleBackColor = true;
-            this.CheckBoxChaosModeEnabled.CheckedChanged += new System.EventHandler(this.CheckBoxChaosModeEnabled_CheckedChanged);
-            // 
-            // WarningTextBox
-            // 
-            this.WarningTextBox.Location = new System.Drawing.Point(11, 25);
-            this.WarningTextBox.Name = "WarningTextBox";
-            this.WarningTextBox.ReadOnly = true;
-            this.WarningTextBox.Size = new System.Drawing.Size(397, 133);
-            this.WarningTextBox.TabIndex = 0;
-            this.WarningTextBox.Text = resources.GetString("WarningTextBox.Text");
+            this.CheckBoxMazeModeOnlyImprt.AutoSize = true;
+            this.CheckBoxMazeModeOnlyImprt.Location = new System.Drawing.Point(338, 238);
+            this.CheckBoxMazeModeOnlyImprt.Name = "CheckBoxMazeModeOnlyImprt";
+            this.CheckBoxMazeModeOnlyImprt.Size = new System.Drawing.Size(173, 17);
+            this.CheckBoxMazeModeOnlyImprt.TabIndex = 35;
+            this.CheckBoxMazeModeOnlyImprt.Text = "Import MazeMode Only Scripts ";
+            this.CheckBoxMazeModeOnlyImprt.UseVisualStyleBackColor = true;
+            this.CheckBoxMazeModeOnlyImprt.CheckedChanged += new System.EventHandler(this.CheckBoxMazeModeOnlyImprt_CheckedChanged);
             // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1157, 568);
+            this.ClientSize = new System.Drawing.Size(1141, 568);
             this.Controls.Add(this.Preferences);
             this.Name = "Menu";
             this.Text = "Menu";
             this.Preferences.ResumeLayout(false);
             this.Preferences.PerformLayout();
-            this.GroupBoxCustomTriggers.ResumeLayout(false);
-            this.GroupBoxCustomTriggers.PerformLayout();
+            this.GroupBoxMazeModeSettings.ResumeLayout(false);
+            this.GroupBoxMazeModeSettings.PerformLayout();
             this.GroupBoxDangerousSettings.ResumeLayout(false);
             this.GroupBoxDangerousSettings.PerformLayout();
+            this.GroupBoxCustomTriggers.ResumeLayout(false);
+            this.GroupBoxCustomTriggers.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -792,6 +847,10 @@ namespace HypnosisRandomizer
         private System.Windows.Forms.CheckBox CheckBoxAllowRandomScriptLogic;
         private System.Windows.Forms.CheckBox CheckBoxChaosModeEnabled;
         private System.Windows.Forms.RichTextBox WarningTextBox;
+        private System.Windows.Forms.CheckBox CheckBoxMazeMode;
+        private System.Windows.Forms.GroupBox GroupBoxMazeModeSettings;
+        private System.Windows.Forms.RichTextBox TextBoxMazeMode;
+        private System.Windows.Forms.CheckBox CheckBoxMazeModeOnlyImprt;
     }
 }
 

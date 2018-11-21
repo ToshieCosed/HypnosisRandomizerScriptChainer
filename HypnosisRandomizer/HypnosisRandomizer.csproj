@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{C59E3945-C69A-4987-9F36-01DD206035EA}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <RootNamespace>HypnosisRandomizer</RootNamespace>
     <AssemblyName>HypnosisRandomizer</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
@@ -29,6 +29,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -67,6 +70,14 @@
     <Compile Include="Form1.designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="MapForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MapForm.Designer.cs">
+      <DependentUpon>MapForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MazeMap.cs" />
+    <Compile Include="MazeRoom.cs" />
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +90,7 @@
     <Compile Include="NoPreferencesSelectedError.Designer.cs">
       <DependentUpon>NoPreferencesSelectedError.cs</DependentUpon>
     </Compile>
+    <Compile Include="Player.cs" />
     <Compile Include="PreferencesRepresentation.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -88,11 +100,15 @@
     <Compile Include="QueryMulti.designer.cs">
       <DependentUpon>QueryMulti.cs</DependentUpon>
     </Compile>
+    <Compile Include="RoomDirectionsData.cs" />
     <Compile Include="ScriptChainer.cs" />
     <Compile Include="ScriptRepresentation.cs" />
     <Compile Include="ScriptScanner.cs" />
     <Compile Include="SessionGeneratorBase.cs" />
     <Compile Include="SpeechScriptInterpreter.cs" />
+    <Compile Include="TileGraphic.cs" />
+    <Compile Include="TileMap.cs" />
+    <Compile Include="Vector2.cs" />
     <EmbeddedResource Include="Dialouge.resx">
       <DependentUpon>Dialouge.cs</DependentUpon>
     </EmbeddedResource>
@@ -101,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MapForm.resx">
+      <DependentUpon>MapForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>

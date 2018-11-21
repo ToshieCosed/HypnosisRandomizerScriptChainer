@@ -117,31 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TextBoxMazeMode.Text" xml:space="preserve">
-    <value>Maze Mode Enabled means that you will get
-put into an explorable interactive hypno maze
-to which there is only one single exit.
-Each room will result in yet another script running.
-This can be mixed with Chaos Mode, or-
-Your normal preferences.
-The session will not end until you escape the maze.
-Only scripts that declare they allow Maze Mode
-integration will be included.</value>
-  </data>
-  <data name="WarningTextBox.Text" xml:space="preserve">
-    <value>!!!WARNING!!!
-Just a warning, only use this section if you realize the consequences.
-There are a few experimental modes here, the consequences may vary.
-This is a very chaotic mode, and not all of the logic is going to make sense.
-CHAOS MODE will IGNORE preferences entirely.
-Selecting only RANDOM SCRIPTS, will include random scripts along with
-your chosen preferences, which may not respect your preferences.
-Untrusted scripts may end up running.
-I am not legally or personally liable for any of your results.
-By using these settings and enabling them you consent to
-whatever happens, it is out of my hands I am just the provider of software.
-SOME Scripts may be provided by third parties and/or other services made by
-people I am not in control of. 
-You have been warned.</value>
-  </data>
 </root>

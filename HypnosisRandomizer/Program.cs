@@ -53,7 +53,8 @@ namespace HypnosisRandomizer
             IsAwakener = 29, IsPunishSegment = 30, IsRewardSegment = 31, IsTriggerSegment = 32, ContainsArousalSegment =33,
             ContainsStripSegment = 34, ContainsOrgasm = 35, ContainsRandomTriggering = 36, IncludeInRandomTriggerInstallPool = 37,
             IncludeInChaosMode = 38, IsFractionationSegment = 39, DeclaresFeatures = 40, IsTrustedScript = 41, IsLongScript = 42,
-            IncludeInTriggerOnWakePool = 43, ContainsMasturbation = 44
+            IncludeInTriggerOnWakePool = 43, ContainsMasturbation = 44, IncludeInMazeModePool = 45,
+            MazeModeOnly = 46
         }
         
 
