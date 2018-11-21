@@ -1,0 +1,15 @@
+Say: I will count down from 5 to 0
+Say: With each count
+Say: You will slip even deeper
+Say: 5
+Say: 4
+Say: Going deeper
+Say: 3
+Say: 2
+Say: So deep almost there. Deeper still.
+Say: Harder time thinking.
+Say: 1
+Say: 0
+Say: So deep now. That's right.
+Say: Very deep now, continue to listen. It's good to listen.
+Say: Continue to listen and become ever more relaxed as you drift now.
