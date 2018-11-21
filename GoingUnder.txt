@@ -1,0 +1,18 @@
+<IncludesFeature:DeclaresFeatures>
+<IncludesFeature:IncludeInMazeModePool>
+<IncludesFeature:MazeModeOnly>
+Say: I will help you go deeper.
+Say: You will not have a choice.
+Say: You must go deeper.
+Say: Are you lost in my maze?
+Say: You feel so lost in my maze.
+Say: It's okay to get lost in the maze.
+Say: It's okay to listen.
+Say: On your next move if possible you will travel north.
+Say: That's right you must go north.
+Say: Or maybe south.
+Say: Are you confused?
+Say: on your next move you must find another voice
+Say: My voice.
+Say: And you will listen again and slip deeper.
+Say: what a good little lost one you are.

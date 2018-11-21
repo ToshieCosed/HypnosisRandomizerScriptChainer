@@ -1,0 +1,12 @@
+<IncludesFeature:DeclaresFeatures>
+<IncludesFeature:IncludeInMazeModePool>
+Say: I am an interactive script.
+Say: I like
+SetEmp:Strong
+Say: You
+SetEmp:Reduced
+Say: Today.
+SetEmp:Reduced
+Say: I like
+Say: You
+Say: Today.
